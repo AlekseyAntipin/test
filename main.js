@@ -16,7 +16,7 @@
 
 
 
-//Булевые значения (Логические значения).true (тру - истина), false(фолс) - лошь.
+//Булевые значения (Логические значения).true (тру - истина), false(фолс) - ложь.
 
 //var myBooleam = true;
 
@@ -153,6 +153,54 @@
 // names.push("Света");       // Добавляем в элемент в конец массива. У Светы номер 3. Push- добавить.
 // console.log(names[3]); //В консоли тут под номером 3 теперь Света.    
 
+// let arr = [1, 2, 3, 4, 5];
+
+// arr.pop(); // Удаляет последний элемент массива, стало 1,2,3,4.
+// arr.push('5');// Добавили "5" в конец массива.
+// arr.shift();// Удаляет 1 элемент из массива.
+// arr.unshift('1');// Добавляет 1 элемент массива.
+// console.log(arr);
+
+// let arr = [1, 2, 3, 4, 5];
+
+// for (let i = 0; i < arr.length; i++) {
+//     console.log(arr[i]); // Перебираем длинну массива.
+    
+// }
+
+// let mass = [1, 3, 4, 6, 7];
+
+// for (let key of mass) {
+//     console.log(key); // Перебор значений.
+    
+// }
+
+// let ans = prompt('', ''),
+//     arr = []// С помощью этого выводится конанда алерта в браузере и то что туда ввести будет выведено в консоли и добавится в массив.
+
+// arr = ans.split(',');
+// console.log(arr);
+
+// let arr = ['sdfds', 'zzz', 'add'],
+//     i = arr.join(); // join(соединить) - всё соединяет в 1 строxre без пробелов.
+// console.log(i);
+
+// let soldier = {
+//     health: 400,
+//     armor: 100
+// };
+// // Будет  health: 100 и 100(не нашёл в Джоне armor и пошёл в soldier, так как он прототив soldier и там уже нашёл armor 100).
+// let john = {
+//     health: 100
+// };
+// ООП
+// john.__proto__ = soldier;
+
+// console.log(john);
+// console.log(john.armor);
+
+
+
 
 
 
@@ -239,8 +287,10 @@
 //         break;
 //     default: 
 //         alert('default');
-//         break;z
+//         break;
 // }
+
+
 
 //ИНКРЕМЕНТ.i++
 
@@ -335,57 +385,77 @@
 // 	console.log("Число больше 20")
 //  }                          
 
-let nam = 50;
-if (nam < 49) {
-    console.log("Неверно!");
-}
+//let nam = 50;
+// if (nam < 49) {
+//     console.log("Неверно!");
+// } else if (nam > 100) {
+//     console.log("Слишком много!");
+// } else {
+//     console.log("Верно!");
+// }
 
-
+//(nam == 50) ? console.log('Верно') : console.log('Неверно');
 
 
 
 //ЦИКЛЫ.
 
-// for (var i = 0; i < 10; i ++) {
+// for (var i = 0; i < 10; i++) {
 //     if (i == 5) {
-//         break;  // break - остановка, будет 0-4.
+//         break; // break - остановка, будет 0-4.
 //     }
 //     console.log(i);
 // }
 
-//  for (var i = 0; i < 10; i ++) {
-//      if (i == 5) {
-//          continue;  // continue - теперь 5 не будет в проверке.
-//      }
-//      console.log(i);
+// for (var i = 0; i < 10; i++) {
+//     if (i == 5) {
+//         continue; // continue - теперь 5 не будет в проверке.
+//     }
+//     console.log(i);
 // }
 
-//  for (var j = 0; j < names.length; j++) {
-//      // тут j - 0(это старт), а в names 3 имени и далее пишем прибавлять по 1(j++). И будет 3 имени.length(ленс) - длинна массива names.От 0 до names будет 3 имени.
-//      console.log(names[j]);
-//  }
-
-
-//  var i = 0;
-//  while (i < 10) { // это аналог фикла for, тут тоже вывелось 0-9. Всегда создавать конечные цыклы.
-//      console.log(i);
-//      i++;
+// for (var j = 0; j < names.length; j++) {
+//     // тут j - 0(это старт), а в names 3 имени и далее пишем прибавлять по 1(j++). И будет 3 имени.length(ленс) - длинна массива names.От 0 до names будет 3 имени.
+//     console.log(names[j]);
 // }
 
-//  var i = 200;
-//  while (i >= 10) { // это аналог фикла for, тут тоже вывелось 200, 100, 50, 25, 12.5
-//      console.log(i);
-//      i /= 2 ;
-//  }
+
+// var i = 0;
+// while (i < 10) { // это аналог фикла for, тут тоже вывелось 0-9. Всегда создавать конечные цыклы.
+//     console.log(i);
+//     i++;
+// }
+
+// var i = 200;
+// while (i >= 10) { // это аналог фикла for, тут тоже вывелось 200, 100, 50, 25, 12.5
+//     console.log(i);
+//     i /= 2;
+// }
 
 
 
 
+// let num = 50;
+// while (num < 55) {
+//     console.log(num);
+//     num++; // будет 50,51,52,53,54.
+// }
+
+// for (let i = 1; i < 8; i++) {  //Не создавать бесконечный цикл, это ошибка, программа провиснет.
+//     if (i == 6) {// Будет 1-5 
+//         break    //Если заменить на continue, то будет 1,2,3,4,5  ,7.
+//     }
+//     console.log(i)
+// }
 
 
-
-
-
+//alert([ ] + 1 + 2);  // Почему будет 12?
+//console.log(2 && 1 && null && 0 && undefined); //Почему ответ null?
+//console.log(!!( a && b ) и (a && b)); // !! что обозначает?
+//alert( null || 2 && 3 || 4 ); //  И почему 3????????
+//alert( +"Infinity" ); // Надпись Infinity
+//alert("ёжик" > "яблоко"); //Почему true???
+//Чему равно 0 || "" || 2 || undefined || true || falsе ?
 
 
 
@@ -418,6 +488,51 @@ if (nam < 49) {
 // }
 // document.write(sum);  // Будет 16.  4+5+7=16+0=16.
 
+
+
+// function showMessage(text) {
+//     alert(text);
+
+// }
+
+// showMessage('Hello World!');
+
+// Мини калькулятор
+// function calc(a, b) {
+//   return (a + b);
+// }
+
+
+
+// function retVar(params) {
+//   let num = 50;
+//   return num;
+// }
+
+// let avtoVivod = retVar(); //Вывели переменную let num = 50; из функции, теперь её можно просмотреть.
+// console.log(avtoVivod);
+
+
+// let calc = function (a, b) {
+//   return (a + b);// тут переменную calc можно использовать в консоли только ПОСЛЕ самой функции.
+// }
+
+// let calc = (a,b) => {a+b}  // => это return
+//  console.log(calc(3,4)); //Это новая функция.
+//  console.log(calc(7,4));
+
+// let str = 'test'; // length - длинна, будет 4, в тесте 4 буквы.
+// console.log(str.length);
+
+// console.log(str.toUpperCase); // Большие буквы.
+// console.log(str.LowerCase); // Маленькие буквы.
+
+
+
+
+
+
+
 //ОБЪЕКТЫ
 
 // var myObject = {    // myObject- объект.
@@ -425,7 +540,7 @@ if (nam < 49) {
 // 	surname: "Васин",
 // 	age: 25, //Возраст.
 // 	getFullName: function() {  // get - МЕТОД полного имени.
-// getFullName – соединяем объекты в объекте.
+// //getFullName – соединяем объекты в объекте.
 // 		return this.name + " " + this.surname;    //  вызов этого имени, + пробел +  этой фамилии.
 // 	}
 // };
@@ -438,3 +553,59 @@ if (nam < 49) {
 // apple.color = 'green';
 // apple.shape = 'round';
 // console.log(apple.color);
+
+// let money = prompt("Ваш бюджет на месяц?"),
+//     time = prompt("Введите дату в формате YYYY-MM-DD");
+
+// let appData = {
+//     budget: money,
+//     timeData: time,
+//     expenses: {},
+//     optionalExpenses: {},
+//     income: [],
+//     savings: false,
+// };
+
+// let options = {
+//     widtf: 1024,
+//     height: 1024,
+//     name: 'test'
+// };
+
+// console.log(options.name);// Будет test.
+// options.bool = false; // Добавили в объект булиновое значение false.
+// options.colors = { //Добавили объект в объект.
+//     border: 'black',
+//     bg: 'red'
+// };
+
+// console.log(options);
+
+// delete options.bool  // Удалили bool
+
+// console.log(options);// Удалили bool
+
+// for (let key in options) {//Узнаём всё что содержится в объекте options.
+//     console.log('Свойвство ' + key + ' имеет значение ' + options[key]);
+// }
+// Метод!!!!
+// let box = document.getElementById('box');// Мы взяли объект документ, использовали метод - get - получение элемента по id и записали в скобках  название идентификатора.
+
+
+
+// Скрипты и время их выполнения.
+
+// let timerId = setTimeout(sayHallo, 3000); // setTimeout - запуск скрипта через определённое время.
+// clearTimeout(timerId); // Остановил скрипт.
+
+// let timerId = setInterval(sayHallo, 3000); //setInterval - повторяется через каждые 3 секунды.
+// //clearTimeout(timerId);
+
+// function sayHallo() {
+//     console.log('Hello World');
+// }
+
+let timerId = setTimeout(function log() {
+    console.log('Hello');
+    setTimeout(log, 2000);// Рекурсивный вызов(повторение.)
+})
